@@ -11,8 +11,11 @@ set(:revision) { source.head }
 set(:real_revision) { source.local.query_revision(revision) { |cmd| `#{cmd}` } }
 
 task :deploy do
-  system "git push --force heroku #{real_revision}:master"
-  system "heroku config:add revision=#{real_revision}"
+  puts "Deploying #{real_revision}"
+  success = system "git push --force heroku #{real_revision}:master"
+  raise "Deployment failed for #{real_revision}" unless success
+
+  system "heroku config:set revision=#{real_revision}"
 end
 
 # Deploy hook to record what got deployed
