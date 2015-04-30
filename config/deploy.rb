@@ -12,6 +12,6 @@ end
 
 task :deploy do
   puts "\tdeploying"
-  # system "cf push #{application}"
+  system "cf push #{application}"
   puts "\tdeployed!"
 end
