@@ -12,6 +12,8 @@ set(:real_revision) { source.local.query_revision(revision) { |cmd| `#{cmd}` } }
 
 task :deploy do
   system "git push --force heroku #{real_revision}:master"
+  remote_revision = `git ls-remote --heads heroku`.split.first
+  system "heroku config:add revision=#{remote_revision}"
 end
 
 # Deploy hook to record what got deployed
