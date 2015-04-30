@@ -18,6 +18,6 @@ group :development, :test do
 end
 
 group :deployments do
-  gem 'fc-deploy', git: 'git@github.com:FundingCircle/fc-deploy.git'
+  gem 'fc-deploy', git: 'git@github.com:FundingCircle/fc-deploy.git', :branch => 'add-deployment-version-to-audit'
 end
 

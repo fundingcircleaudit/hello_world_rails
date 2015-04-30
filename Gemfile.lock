@@ -1,6 +1,7 @@
 GIT
   remote: git@github.com:FundingCircle/fc-deploy.git
-  revision: cea4c06a038530a807f995d99f30e1efc7f0bb75
+  revision: 7106651f7e3ced0ca0513850e2d6a1d0ebece1c6
+  branch: add-deployment-version-to-audit
   specs:
     fc-deploy (1.7.0)
       auto_tagger
