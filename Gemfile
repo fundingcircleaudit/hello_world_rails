@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'capistrano-snowden', path: '~/projects/capistrano-snowden'
+gem 'fc-deploy', git: 'git@github.com:FundingCircle/fc-deploy.git'
 gem 'capistrano', '~> 2.15'
 
 group :development, :test do
