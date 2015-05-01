@@ -9,12 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'fc-deploy', git: 'git@github.com:FundingCircle/fc-deploy.git'
 gem 'capistrano', '~> 2.15'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :deployments do
+  gem 'fc-deploy', git: 'git@github.com:FundingCircle/fc-deploy.git'
 end
 
