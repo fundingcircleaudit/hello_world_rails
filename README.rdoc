@@ -1,3 +1,3 @@
 == README
 
-An app we can use to test our auditing system
+A toy app we can use to test our auditing system
